@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head> 
+        <!-- @Author: Niels Bekkers -->
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+        <!-- Website CSS style -->
+        <link rel="stylesheet" type="text/css" href="css/main.css">
+
+        <!-- Website Font style -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+        
+        <!-- Google Fonts -->
+        <link href='https://fonts.googleapis.com/css?family=Passion+One' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'>
+
+        <title>Spoofmail Tool</title>
+    </head>
+    <body>
+        <div class="input-group" id="adv-search">
+            <div class="input-group-btn">
+                <div class="btn-group" role="group">
+                    <div class="dropdown dropdown-lg">
+                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                            <i class="fa fa-wrench" aria-hidden="true"></i> Authenticeren</button>
+                        <div class="dropdown-menu dropdown-menu-right" role="menu">
+                            <form class="form-horizontal" role="form" action="chooseMail.php" method="post">
+                              <div class="form-group">
+                                <label for="contain">E-mailadres GMAIL</label>
+                                <input class="form-control" type="text" name="gmail" placeholder="voorbeeld@gmail.com"/>
+                              </div>
+                              <div class="form-group">
+                                <label for="contain">Wachtwoord</label>
+                                <input class="form-control" type="password" name="wachtwoordGmail" placeholder="******"/>
+                              </div>
+                              <button type="submit" class="btn btn-primary"><i class="fa fa-check" aria-hidden="true"></i></button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row main">
+                <div class="panel-heading">
+                   <div class="panel-title text-center">
+                        <h1 class="title">Spoofmail Tool</h1>
+                        <hr />
+                    </div>
+                </div> 
+                <div class="main-login main-center">
+                    <form class="form-horizontal" method="post" action="SpoofTest.php">
+ 
+                        <div class="form-group">
+                            <label for="name" class="cols-sm-2 control-label">Verstuur naar</label>
+                            <div class="cols-sm-10">
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="fa fa-paper-plane fa" aria-hidden="true"></i></span>
+                                    <input type="text" class="form-control" name="SendTo" id="name"  placeholder="Geef Bestemmingsadres in"/>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email" class="cols-sm-2 control-label">Verzonden van</label>
+                            <div class="cols-sm-10">
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="fa fa-lock fa" aria-hidden="true"></i></span>
+                                    <input type="text" class="form-control" name="From" id="email"  placeholder="Geef spoofed naam/email in"/>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email" class="cols-sm-2 control-label">Antwoord aan</label>
+                            <div class="cols-sm-10">
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="fa fa-reply fa" aria-hidden="true"></i></span>
+                                    <input type="text" class="form-control" name="Answer" id="email"  placeholder="E-mailadres waarnaar antwoorden verstuurd worden"/>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="username" class="cols-sm-2 control-label">Onderwerp</label>
+                            <div class="cols-sm-10">
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="fa fa-envelope fa" aria-hidden="true"></i></span>
+                                    <input type="text" class="form-control" name="Subject" id="username"  placeholder="Geef onderwerp in"/>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="password" class="cols-sm-2 control-label">Bericht</label>
+                            <div class="cols-sm-10">
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="fa fa-comment fa-lg" aria-hidden="true"></i></span>
+                                    <textarea type="text" class="form-control" name="Message" id="password"  placeholder="Je bericht"></textarea>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group ">
+                            <input type="submit" class="btn btn-primary btn-lg btn-block login-button" Value="Verstuur" />
+                            <!--<button type="button" class="btn btn-primary btn-lg btn-block login-button">Verstuur</button>-->
+                        </div>
+                        <div class="login-register">
+                            <i class="fa fa-copyright fa-lg" aria-hidden="true"></i> Niels Bekkers
+                         </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    </body>
+</html>
